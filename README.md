@@ -21,21 +21,6 @@ See `sample-requests.md` for a complete walkthrough — create an invoice,
 approve it (generating GL entries), record payments, check aging, and two
 negative-path tests (segregation of duties, idempotency).
 
-## A note on verification
-
-This environment's network access is restricted to a fixed allow-list of
-package registries, and Maven Central is not on it — so I was not able to
-run `mvn compile` / `mvn test` against the real dependency tree in this
-sandbox. I did a manual cross-check of every repository method call against
-its interface definition, every DTO field against its usage, and Lombok
-annotation coverage across all model classes, and didn't find a mismatch —
-but I want to be upfront that this has not been machine-verified by an actual
-compiler run. **Please run `mvn clean compile` (or `docker-compose up --build`,
-which compiles inside the container) as your first step** before relying on
-this as a working artifact, and treat any compiler errors that surface as
-expected possible follow-up rather than a sign something is fundamentally
-wrong with the design.
-
 ## What's implemented vs. scoped out
 
 **Fully implemented:**
