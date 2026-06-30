@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ar-module
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/ar_module}
+    username: ${DB_USER:ar_user}
+    password: ${DB_PASSWORD:ar_password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate   # schema is owned by Flyway migrations, not Hibernate auto-DDL
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: public
+    open-in-view: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.erp.ar: INFO
+    org.hibernate.SQL: DEBUG
