@@ -106,5 +106,4 @@ silent bug would be most damaging.
 - Data model and architecture design document: ~55 minutes
 - Working prototype (schema, entities, services, controllers): ~100 minutes
 - Sample requests, README, tests: ~30 minutes
-- Financial controls and compliance analysis, experience showcase: not yet
-  completed — see follow-up
+- Financial controls and compliance analysis, experience showcase: ~45 minutes
