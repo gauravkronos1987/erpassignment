@@ -73,7 +73,7 @@ breadth):**
 
 ## Tech choices and why
 
-- **Spring Boot 3 / Java 17** — your strongest stack, fastest path to a
+- **Spring Boot 3 / Java 17** — my strongest stack, fastest path to a
   defensible prototype in the time available
 - **PostgreSQL via Flyway** — schema is explicit and versioned rather than
   Hibernate auto-DDL, which matters for a financial system where every schema
