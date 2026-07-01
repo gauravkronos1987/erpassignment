@@ -48,10 +48,8 @@ The issue was fully resolved, data consistency improved significantly, and we el
 
 ## An experience with period-end close, audit preparation, or compliance requirements
 
-The MFA migration for Kronos WFC is the strongest fit here, even though it's
-security rather than accounting compliance specifically — eliminating a
-critical OWASP A07 identity vulnerability across 5,000+ enterprise tenants
-required the same kind of discipline this assessment is testing: documenting
+The MFA migration for Kronos WFC eliminating a critical OWASP A07 identity vulnerability 
+across 5,000+ enterprise tenants required the same kind of discipline: documenting
 exactly what changed, when, for which tenants, with a clear audit trail of
 the rollout, and coordinating the change without breaking authenticated
 access for live enterprise customers mid-migration. The broader RBAC/ABAC
