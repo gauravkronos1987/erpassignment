@@ -46,8 +46,7 @@ Automated validation reports comparing source and downstream records.
 Result:
 The issue was fully resolved, data consistency improved significantly, and we eliminated recurring compensation statement discrepancies. The reconciliation framework also reduced investigation time for future data-related incidents by more than 80%.
 
-## An experience with period-end close, audit preparation, or compliance
-requirements
+## An experience with period-end close, audit preparation, or compliance requirements
 
 The MFA migration for Kronos WFC is the strongest fit here, even though it's
 security rather than accounting compliance specifically — eliminating a
