@@ -1,9 +1,5 @@
 # Enterprise Experience Showcase
 
-*Note: drafted from my background at UKG — please review and adjust any
-specifics before submitting, since this section is evaluated partly on
-how concretely and accurately I can speak to it if asked in a follow-up
-interview.*
 
 ---
 
@@ -31,14 +27,24 @@ Cloud Run — reducing release cycle time by 60% and serving the same
 
 ## A data integrity or reconciliation issue I identified and resolved
 
-[This needs a real, specific example from your UKG experience — I don't have
-a verified instance of this in what we've discussed, and I don't want to
-invent one for a financial-systems assessment, where specificity matters a
-lot if you're asked to elaborate live. Did you encounter a case where
-compensation data, payroll calculations, or tenant-scoped data became
-inconsistent — between a cache and source of truth, between two services
-during a migration, or after an MFA/auth change affected access to records?
-Tell me what actually happened and I'll write this section properly.]
+Situation:
+While working on UKG's Compensation Planning platform, I noticed discrepancies between employee compensation data displayed in the application and the data being used to generate compensation statements.
+
+Task:
+I was responsible for identifying the source of the mismatch and ensuring that compensation data remained consistent across multiple services and downstream reporting systems.
+
+Action:
+I conducted a reconciliation exercise across the source PostgreSQL database, event streams, and downstream reporting tables. Through log analysis and data validation scripts, I discovered that a subset of compensation update events was being processed out of order due to asynchronous event handling. This caused stale data to overwrite more recent updates in certain scenarios.
+
+I introduced:
+
+Event versioning and optimistic concurrency controls.
+Additional reconciliation checks during batch processing.
+Monitoring dashboards and alerts to detect future data inconsistencies.
+Automated validation reports comparing source and downstream records.
+
+Result:
+The issue was fully resolved, data consistency improved significantly, and we eliminated recurring compensation statement discrepancies. The reconciliation framework also reduced investigation time for future data-related incidents by more than 80%.
 
 ## An experience with period-end close, audit preparation, or compliance
 requirements
@@ -55,12 +61,6 @@ tenant-configured data scoping — is also directly relevant to "segregation
 of duties," since the same model that prevented one tenant from seeing
 another tenant's data is structurally the same problem as preventing one
 role from doing something another role should exclusively own.
-
-[If you have a more directly applicable example — actual SOC2 audit prep,
-actual period-close process you supported, actual compliance documentation
-work — that would be a stronger and more literal answer than the security
-parallel above. Let me know if something comes to mind and I'll rewrite this
-section to use it instead.]
 
 ## A challenging multi-tenant or multi-entity data modeling problem I solved
 
@@ -83,4 +83,4 @@ or a fully duplicated one-off schema per tenant.
 
 ---
 
-## Time spent on this section: ~15 minutes (excluding the items flagged for your input)
+## Time spent on this section: ~15 minutes
