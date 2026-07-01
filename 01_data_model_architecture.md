@@ -219,7 +219,7 @@ This answers "who changed what, when" for any record — required for SOX and ge
 
 ---
 
-## 5. Accounting Integration — How Documents Generate GL Entries
+## 5. Accounting Integration — How Invoices Generate GL Entries
 
 **Invoice approval** (Draft → Approved transition):
 ```
